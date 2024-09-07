@@ -103,8 +103,48 @@ p {
     height: 20px;
     background-color: var(--Very-Dark-Blue);
     border-radius: 20px;
-    padding-top: 10px;
+    padding: 3px;
+    overflow: hidden;
 }
+
+.data-used .used {
+    width: 81.5%;
+    height: 100%;
+    float: left;
+    background: linear-gradient(135deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    position: relative;
+    border-radius: 20px;
+    animation: used 2.5s ease;
+}
+
+.circle {
+    background-color: white;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: 439px;
+    top: 2px;
+    animation: circle 2.5s ease;
+}
+
+@keyframes used {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 81.5%;
+    }
+}
+
+@keyframes circle {
+    0% {
+        left: -20px;
+    }
+    100% {
+        left: 439px;
+    }
+} 
 
 span {
     color: var(--Pale-Blue);
@@ -134,6 +174,7 @@ span {
     position: absolute;
     left: 475px;
     top: -40px;
+    animation: left-gigs 2.5s ease;
 }
 
 .triangle {
@@ -146,8 +187,45 @@ span {
     border-right: 24px solid transparent;
     border-bottom: 24px solid white;
     transform: rotate(-90deg);
+    animation: triangle 2.49s ease;
 }
 
+
+@keyframes triangle {
+    0% {
+        opacity: 0;
+        border-left: 24px solid transparent;
+        border-right: 24px solid transparent;
+        left: 0px;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        left: 589px;
+    }
+}
+
+@keyframes left-gigs {
+    0% {
+        opacity: 0;
+        left: 0px;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        left: 475px;
+    }
+}
 
 
 .left-gigs p {
