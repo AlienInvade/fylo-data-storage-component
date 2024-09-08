@@ -79,12 +79,11 @@ body {
     align-items: center;  
 }
 
-
-
 .storage {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 300px;
     width: 700px;
     height: 180px;
     margin-top: 40px;
@@ -238,4 +237,72 @@ span {
 .left-gigs span {
     color: var(--Grayish-Blue);
     font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        background-image: url(./images/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 0;
+        overflow: auto;
+    }
+    .container {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+   
+    .svg-container, .storage {
+        width: 380px;
+    }
+    
+    .data-used {
+        width: 304px;
+    }
+
+    .data-used .circle {
+        left: 230px;
+    }
+
+    @keyframes circle {
+        0% {
+            left: -20px;
+        }
+        100% {
+            left: 230px;
+        }
+    } 
+
+    .left-gigs {
+        left: 110px;
+        top: 150px;
+        border-radius: 10px;
+        animation: left-gigs 2.5s ease-in;
+    }
+
+    @keyframes left-gigs {
+        0% {
+            opacity: 0;
+            left: 0px;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            left: 110px;
+        }
+    }
+
+    .triangle {
+        display: none;
+        opacity: 0;
+    }
+
+    p {
+        font-size: 18px;
+    }
+   
 }
