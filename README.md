@@ -27,6 +27,7 @@ This is a solution to the [Fylo data storage component challenge on Frontend Men
 - CSS custom properties
 - Flexbox
 - CSS Variables
+- jQuery
 
 ## Author
 

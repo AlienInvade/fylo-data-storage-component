@@ -79,6 +79,10 @@ body {
     align-items: center;  
 }
 
+.item:hover {
+    cursor: pointer;
+}
+
 .storage {
     display: flex;
     justify-content: center;
